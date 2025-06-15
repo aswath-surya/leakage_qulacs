@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: leakage_circuit_compiler
+Version: 0.1
+Summary: Leakage-aware hybrid qutrit-qubit circuit simulator based on Qulacs
+Author: Your Name
+License: MIT
+Requires-Dist: qulacs
+Requires-Dist: numpy
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
