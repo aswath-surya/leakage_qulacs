@@ -1,3 +1,0 @@
-qulacs
-numpy
-scipy
