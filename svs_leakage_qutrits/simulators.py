@@ -1,5 +1,6 @@
 from qulacs import QuantumCircuit, QuantumState
 from .encoding import EncodingMap
+from .decoders import majority_check_decoder
 from .parser import parse_circuit_string
 from .translators import GateTranslator
 
