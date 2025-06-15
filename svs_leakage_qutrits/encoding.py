@@ -10,10 +10,19 @@ class EncodingMap:
         self.total_qubits = len(qubits)
         self.offset = self.total_qutrits + self.total_qubits
         self.encoding = {}
+        # for qt in qutrits:
+        #     self.encoding[qt] = (qt, qt + self.offset)
+        # for qb in qubits:
+        #     self.encoding[qb] = qb
+        phys_idx = 0
+
         for qt in qutrits:
-            self.encoding[qt] = (qt, qt + self.offset)
+            self.encoding[qt] = (phys_idx, phys_idx+1)
+            phys_idx += 2
+
         for qb in qubits:
-            self.encoding[qb] = qb
+            self.encoding[qb] = phys_idx
+            phys_idx += 1
 
     def logical_to_physical(self, logical_index):
         return self.encoding[logical_index]
