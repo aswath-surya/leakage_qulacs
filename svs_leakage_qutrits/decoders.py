@@ -32,11 +32,15 @@ def majority_check_decoder(bitstring_list, encoding_map, expected_logical_value=
 
             decoded_values[qt] = logical
 
-        values = list(decoded_values.values())
-        logical_sum = sum(values)
+        # count 0's and 1's (ignore 2's)
+        count_0 = sum(1 for val in decoded_values.values() if val == 0)
+        count_1 = sum(1 for val in decoded_values.values() if val == 1)
 
-        logical_value = 1 if logical_sum >= 2 else 0  # majority rule
-
+        if count_0 > count_1:
+            logical_value = 0
+        elif count_1 > count_0:
+            logical_value = 1
+        
         if logical_value != expected_logical_value:
             logical_error_count += 1
 
