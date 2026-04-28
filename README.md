@@ -1,6 +1,9 @@
 Leakage Circuit Compiler (README)
 ===============================
 
+Some aspects currently deprecated. Will be updated soon.
+---
+
 The Leakage Circuit Compiler is a Python package for simulating hybrid qubit-qutrit quantum circuits that include leakage, noise, and arbitrary CPTP channels. It is built on top of the qulacs simulator, and supports a flexible circuit string format that allows the specification of encoding, gates, noise models, and measurements.
 
 Circuit String Input Format:
